@@ -5,5 +5,3 @@ Using HTML, CSS, and JavaScript, I brought this vision to life, with GSAP and Sc
 This project was a September milestone for me, showcasing my skills in web development and animation.
 
 ⚠️ NOTE : This website Is now only mobile responsive. And now I'm working on it for PC responsiveness too.
-
-#WebDevelopment #Animation #AwwwardsInspired
