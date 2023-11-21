@@ -19,12 +19,14 @@ html,body{
     background-color: #F7F7F7;
 }
 
+/* page--1 */
+
 #nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2vh 3vh;
-    width: 50vh;
+    width: 100vw;
     position: fixed;
     z-index: 99;
 }
@@ -57,7 +59,6 @@ html,body{
     border-radius: 50px;
 }
 
-
 #title{
     padding-top: 25vh;
     padding-left: 2vh;
@@ -72,29 +73,24 @@ html,body{
     gap: 10px;
     overflow: hidden;
 }
+#title .title-p1:nth-child(1){
+    padding-left: 60px;
+}
 
-
-#video img{
+#book img{
     position: relative;
-    padding: 2.5vh 2.3vh;
-    width: 25rem;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
 }
-#video h2{
+.buy-now{
     position: absolute;
-    text-transform: uppercase;
-    color: white;
-    background-color: black;
-    padding: 5vh 3.5vh;
-    border-radius: 50%;
-    font-size: 20px;
-    top:47%;
-    left: 50%;
-    translate: -50%;
+    top: 50%;
+    right: 0%;
 }
-
 
 .lining-content{
-    padding: 2vh 1.5vh 0  2.3vh;
+    padding: 0vh 1.5vh 0  2.3vh;
 }
 .line-text{
     display: flex;
@@ -111,6 +107,7 @@ html,body{
     background-color: black;
 }
 
+/* page--2 */
 
 #img-container{
     padding: 0 2.3vh;
@@ -145,10 +142,11 @@ html,body{
     border-radius: 50px;
 }
 #img-container .img-section .info-1{
-    background-color: #C1AAA4;
+    background-color: #E6F0D7;
 }
 #img-container .img-section .info-2{
     background-color: #F2DDCB;
+    gap: 30px;
 }
 #img-container .img-section .info-3{
     background-color: white;
@@ -166,12 +164,15 @@ html,body{
 #img-container .img-section .info .elem2{
     font-family: 'Gilroy';
     font-weight: 700;
+    white-space: nowrap;
 }
 #img-container .img-section .info .dot{
     padding: 4px;
     background-color: black;
     border-radius: 50%;
 }
+
+/* page--3 */
 
 .bottom-title{
     display: flex;
@@ -181,6 +182,7 @@ html,body{
 }
 .bottom-title h1{
     line-height: 1;
+    font-size: 31px;
 }
 .bottom-title p{
     font-family: 'Gilroy';
@@ -201,6 +203,10 @@ html,body{
     margin: 0 120px;
 }
 
+
+/* page--4 */
+
+
 #buying-section{
     padding-left: 1.7vh;
     padding-top: 10vh;
@@ -208,13 +214,16 @@ html,body{
     flex-wrap: wrap;
 }
 #buying-section .product{
-    height: 25vh;
+    min-height: 25vh;
     width: 20vh;
     margin: 12px;
     padding: 0 10px;
+    overflow: hidden;
 }
 #buying-section .product img{
     height: 17vh;
+    width: 100%;
+    object-fit: cover;
 }
 #buying-section .product h3{
     font-size: 13px ;
@@ -234,6 +243,9 @@ html,body{
 .lining-content .line-text-2{
     text-align: end;
 }
+
+/* page--5*/
+
 
 .bottom-title-1 h1{
     font-size: 25px;
@@ -285,6 +297,9 @@ html,body{
     margin-right: 26vh;
     margin-top: 10px;
 }
+
+/* page--6 */
+
 
 #details-1{
     margin-top: 13vh;
@@ -505,3 +520,5 @@ html,body{
         transform: translateX(0%);
     }
 }
+
+
