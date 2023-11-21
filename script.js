@@ -203,16 +203,11 @@ function HomepageAnimation() {
     stagger: 0.2
   })
 
-  gsap.from("#video img", {
+  gsap.from("#book img", {
+    y:60,
     opacity: 0,
     duration: 0.5,
     delay: 1,
-  })
-  gsap.from("#video h2", {
-    y: 100,
-    opacity: 0,
-    duration: 0.3,
-    delay: 0.7,
   })
 
 }
