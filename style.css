@@ -492,7 +492,7 @@ html,body{
 }
 
 
-/* .scroller{
+.scroller{
     width: 100%;
     bottom: -27%;
 }
@@ -538,7 +538,7 @@ html,body{
     to{
         transform: translateX(0%);
     }
-} */
+}
 
 
 @media (max-width: 768px) {
