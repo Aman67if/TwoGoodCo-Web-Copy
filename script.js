@@ -1,12 +1,14 @@
-let Ham = document.querySelector("#hamburger")
-let main = document.querySelector(".extras")
-let cart = document.querySelector("#menu i")
-let menuContainer = document.querySelector("#menu")
+let Ham = document.querySelector("#hamburger");
+let main = document.querySelector(".extras");
+let cart = document.querySelector("#menu i");
+let menuContainer = document.querySelector("#menu");
 let open1 = 0;
 let open2 = 0;
 
+let lastScrollTop = 0;
+let lastDirection = null; 
 
-Ham.addEventListener("click", function() {
+Ham.addEventListener("click", function () {
   if (open1 == 0) {
     menuContainer.style.backgroundColor = "black";
     open1 = 1;
@@ -64,69 +66,69 @@ Ham.addEventListener("click", function() {
     if (open2 == 1) {
       gsap.from(".menu-page", {
         y: 900,
-        duration: 0.3
-      })
+        duration: 0.3,
+      });
       open2 = 0;
     } else {
       gsap.from(".menu-page", {
         y: -600,
-        duration: 0.4
-      })
+        duration: 0.4,
+      });
     }
     gsap.to("#nav #logo h1 , #hamburger , #menu i ,#twogoodlogo ", {
-      color: "white"
-    })
+      color: "white",
+    });
     gsap.from(".menu-base h2", {
       y: 200,
       opacity: 0,
-      stagger: 0.025
-    })
+      stagger: 0.025,
+    });
     gsap.from(".menu-base-1 span", {
-      y: 200
-    })
+      y: 200,
+    });
     gsap.from(".menu-page .about-pt2 .about-1-pt2>h3", {
       opacity: 0,
       delay: 0.5,
-      duration: 0.8
-    })
+      duration: 0.8,
+    });
     gsap.from(".menu-page .about-pt2 .about-1-pt2 .about-title-pt2 h3", {
       y: 40,
       opacity: 0,
       delay: 0.4,
-      duration: 0.5
-    })
+      duration: 0.5,
+    });
   } else {
     gsap.to(".menu-page", {
       y: -1300,
-      duration: 0.45
-    })
+      duration: 0.45,
+    });
     menuContainer.style.backgroundColor = "white";
     open1 = 0;
     gsap.to("#nav #logo h1 , #hamburger , #menu i ,#twogoodlogo", {
-      color: "black"
-    })
+      color: "black",
+    });
     gsap.to(".menu-base h2", {
       y: 200,
       opacity: 0,
-      duration: 0.1
-    })
+      duration: 0.1,
+    });
     gsap.to(".menu-base-1 span", {
       y: 200,
       opacity: 0,
-      duration: 0.1
-    })
+      duration: 0.1,
+    });
     gsap.to(".menu-page .about-pt2 .about-1-pt2>h3", {
       opacity: 0,
-      duration: 0.1
-    })
+      duration: 0.1,
+    });
     gsap.to(".menu-page .about-pt2 .about-1-pt2 .about-title-pt2 h3", {
       opacity: 0,
-      duration: 0.1
-    })
+      duration: 0.1,
+    });
   }
-})
+});
 
-cart.addEventListener("click", function() {
+cart.addEventListener("click", function () {
   if (open2 == 0) {
     open2 = 1;
     if (open1 == 1) {
@@ -159,33 +161,32 @@ cart.addEventListener("click", function() {
     </div>`;
     gsap.from(".cart-section", {
       y: -900,
-      duration: 0.3
-    })
+      duration: 0.3,
+    });
     gsap.to("#nav #logo h1 , #hamburger , #menu i ,#twogoodlogo ", {
-      color: "white"
-    })
+      color: "white",
+    });
     gsap.from(".scroller", {
       opacity: 0,
-      delay: 0.18
-    })
+      delay: 0.18,
+    });
     gsap.from(".cart-section .empty h3 , .cart-section .empty button", {
       opacity: 0,
       y: -40,
-      stagger: 0.15
-    })
+      stagger: 0.15,
+    });
   } else {
     gsap.to(".cart-section", {
       y: -1300,
-      duration: 0.45
-    })
+      duration: 0.45,
+    });
     open2 = 0;
     menuContainer.style.backgroundColor = "white";
     gsap.to("#nav #logo h1 , #hamburger , #menu i ,#twogoodlogo", {
-      color: "black"
-    })
+      color: "black",
+    });
   }
-})
-
+});
 
 function HomepageAnimation() {
   gsap.from("#nav , #menu span , #menu i", {
@@ -193,23 +194,22 @@ function HomepageAnimation() {
     opacity: 0,
     duration: 0.5,
     delay: 0.5,
-    stagger: 0.1
-  })
+    stagger: 0.1,
+  });
 
   gsap.from(".title-p1 h1", {
-    y: 50,
+    y: 200,
     duration: 0.3,
     delay: 0.2,
-    stagger: 0.2
-  })
+    stagger: 0.2,
+  });
 
   gsap.from("#book img", {
-    y:60,
+    y: 60,
     opacity: 0,
     duration: 0.5,
     delay: 1,
-  })
-
+  });
 }
 
 function ImgsAnimation() {
@@ -219,93 +219,81 @@ function ImgsAnimation() {
     duration: 0.4,
     scrollTrigger: {
       start: "top -13%",
-      end: "top -100%"
-    }
-  })
+      end: "top -100%",
+    },
+  });
 
   gsap.from(".img1", {
     scale: 1,
     scrollTrigger: {
       start: "top -15%",
       end: "top -400%",
-      scrub: true
-    }
-  })
+      scrub: true,
+    },
+  });
   gsap.from(".img2", {
     scale: 1,
     scrollTrigger: {
       start: "top -70%",
       end: "top -400%",
-      scrub: true
-    }
-  })
+      scrub: true,
+    },
+  });
   gsap.from(".img3", {
     scale: 1,
     scrollTrigger: {
       start: "top -110%",
       end: "top -400%",
-      scrub: true
-    }
-  })
+      scrub: true,
+    },
+  });
 
   gsap.from(".info", {
     opacity: 0,
     duration: 0.4,
     scrollTrigger: {
       start: "top -13%",
-      end: "top -100%"
-    }
-  })
+      end: "top -100%",
+    },
+  });
 
   gsap.to(".info-1", {
     y: 315,
     scrollTrigger: {
       start: "top 3%",
       end: "top -300%",
-      scrub: true
-    }
-  })
+      scrub: true,
+    },
+  });
 
   gsap.to(".info-2", {
     y: 315,
     scrollTrigger: {
       start: "top -60%",
       end: "top -300%",
-      scrub: true
-    }
-  })
+      scrub: true,
+    },
+  });
 
   gsap.to(".info-3", {
     y: 415,
     scrollTrigger: {
       start: "top -110%",
       end: "top -600%",
-      scrub: true
-    }
-  })
+      scrub: true,
+    },
+  });
 }
 
 function LogoAnimation() {
-  gsap.to("#logo h1 , #logo svg", {
-    y: -68,
-    duration: 0.1,
-    scrollTrigger: {
-      trigger: "#logo h1",
-      scroller: "body",
-      start: "top -8%",
-      end: "top -30%",
-      // scrub:true,
-    }
-  })
-
   gsap.from("#end #End-logo", {
     opacity: 0,
     duration: 1.5,
     scrollTrigger: {
       trigger: "#end",
-      scroller: "body"
-    }
-  })
+      scroller: "body",
+    },
+  });
 }
 
 function BuyingSectionAnimation() {
@@ -316,22 +304,25 @@ function BuyingSectionAnimation() {
     stagger: 0.3,
     scrollTrigger: {
       trigger: "#buying-section .product",
-      scroller: "body"
-    }
-  })
+      scroller: "body",
+    },
+  });
 }
 
 function BottomDescription() {
-  gsap.from(".bottom-title-1 h1 , .bottom-title-1 button , .bottom-title-1 p ", {
-    y: 80,
-    opacity: 0,
-    duration: 0.4,
-    stagger: 0.3,
-    scrollTrigger: {
-      trigger: ".bottom-title-1",
-      scroller: "body",
+  gsap.from(
+    ".bottom-title-1 h1 , .bottom-title-1 button , .bottom-title-1 p ",
+    {
+      y: 80,
+      opacity: 0,
+      duration: 0.4,
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: ".bottom-title-1",
+        scroller: "body",
+      },
     }
-  })
+  );
 
   gsap.from(".bottom-title-2 h1 , .bottom-title-2 p", {
     y: 70,
@@ -340,22 +331,23 @@ function BottomDescription() {
     stagger: 0.3,
     scrollTrigger: {
       trigger: ".bottom-title-2",
-      scroller: "body"
-    }
-  })
+      scroller: "body",
+    },
+  });
 }
 
 function PersonAnimation() {
-  gsap.from("#small-imgs .person img", {
-    y: -120,
+  gsap.to("#small-imgs .person img", {
+    y: -200,
     scrollTrigger: {
       trigger: "#small-imgs .person",
       scroller: "body",
-      start: "top 100%",
-      end: "bottom -30%",
-      scrub: 1
-    }
-  })
+      start: "top 80%",
+      end: "bottom -40%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
 }
 
 function EmailAnimation() {
@@ -366,9 +358,9 @@ function EmailAnimation() {
     stagger: 0.2,
     scrollTrigger: {
       trigger: "#details",
-      scroller: "body"
-    }
-  })
+      scroller: "body",
+    },
+  });
 }
 
 function OurHandels() {
@@ -379,9 +371,9 @@ function OurHandels() {
     stagger: 0.1,
     scrollTrigger: {
       trigger: ".about",
-      scroller: "body"
-    }
-  })
+      scroller: "body",
+    },
+  });
 }
 
 function ParagraphAnimation() {
@@ -392,9 +384,9 @@ function ParagraphAnimation() {
     stagger: 0.2,
     scrollTrigger: {
       trigger: "#para-section",
-      scroller: "body"
-    }
-  })
+      scroller: "body",
+    },
+  });
 }
 
 HomepageAnimation();
@@ -406,3 +398,47 @@ PersonAnimation();
 EmailAnimation();
 OurHandels();
 ParagraphAnimation();
+
+window.addEventListener("scroll", function () {
+  const currentScroll =
+    window.pageYOffset || document.documentElement.scrollTop;
+
+  let direction = null;
+  if (currentScroll > lastScrollTop) {
+    direction = "down";
+  } else if (currentScroll < lastScrollTop) {
+    direction = "up";
+  }
+
+  if (direction && direction !== lastDirection) {
+    if (direction === "down") {
+      gsap.to("#logo h1 , #logo svg", {
+        y: -68,
+        duration: 0.1,
+        scrollTrigger: {
+          trigger: "#logo h1",
+          scroller: "body",
+          start: "top -8%",
+          end: "top -30%",
+          // scrub:true,
+        },
+      });
+    } else {
+      gsap.to("#logo h1 , #logo svg", {
+        y: 0,
+        duration: 0.1,
+        scrollTrigger: {
+          trigger: "#logo h1",
+          scroller: "body",
+          start: "top -8%",
+          end: "top -30%",
+          // scrub:true,
+        },
+      });
+
+    }
+    lastDirection = direction; // update only if changed
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});

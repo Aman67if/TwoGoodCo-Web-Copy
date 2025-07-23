@@ -65,7 +65,7 @@ html,body{
 }
 #title h1{
     text-transform: uppercase;
-    font-size: 6.8vh;
+    font-size: clamp(5vw, calc(13vw + 1rem), 14vw);
     line-height: 0.8;
 }
 .title-p1{
@@ -74,13 +74,13 @@ html,body{
     overflow: hidden;
 }
 #title .title-p1:nth-child(1){
-    padding-left: 60px;
+    padding-left: 0;
 }
 
 #book img{
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 100%;
     object-fit: cover;
 }
 .buy-now{
@@ -110,13 +110,16 @@ html,body{
 /* page--2 */
 
 #img-container{
-    padding: 0 2.3vh;
+    /* padding: 0 2vh; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 
 #img-container .img-section{
-    height: 74vh;
-    width: 92vw;
+    height: 78vh;
+    width: 31vw;
     margin-top: 1.4vh;
     position: relative;
     overflow: hidden;
@@ -124,7 +127,7 @@ html,body{
 }
 #img-container .img-section .img img{
     height: 74vh;
-    width: 92vw;
+    width: 31vw;
     object-fit: cover;
 }
 
@@ -182,14 +185,18 @@ html,body{
 }
 .bottom-title h1{
     line-height: 1;
-    font-size: 31px;
+    font-size: 3rem;
+    width: 100%;
+    padding: 0 2rem;
 }
 .bottom-title p{
     font-family: 'Gilroy';
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     padding-top: 3vh;
     padding-bottom: 1vh;
+    width: 70%;
+    margin: auto;
 }
 .bottom-title p:nth-child(3){
     padding-bottom: 3vh;
@@ -201,6 +208,529 @@ html,body{
 }
 .line-1{
     margin: 0 120px;
+}
+
+
+/* page--4 */
+
+
+#buying-section{
+    padding-left: 1.7vh;
+    padding-top: 10vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#buying-section .product{
+    min-height: 25vh;
+    width: 20vh;
+    margin: 12px;
+    padding: 0 10px;
+    overflow: hidden;
+}
+#buying-section .product img{
+    height: 17vh;
+    width: 100%;
+    object-fit: cover;
+}
+#buying-section .product h3{
+    font-size: 13px ;
+    text-align: center;
+    font-family: 'Gilroy';
+    text-transform: uppercase;
+    font-weight: 400;
+}
+#buying-section .product .price{
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.lining-content-2{
+    padding: 10vh 1.5vh 2vh 2.3vh;
+}
+.lining-content .line-text-2{
+    text-align: end;
+}
+
+/* page--5*/
+
+
+.bottom-title-1 h1{
+    font-size: 3rem;
+}
+.bottom-title-1 button{
+    font-family: 'Gilroy';
+    padding: 2.5vh 2vh;
+    margin: 4vh auto;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 50%;
+}
+.bottom-title-1 p{
+    width: 70%;
+    margin: auto;
+    margin-top: -1rem;
+}
+
+#small-imgs{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#small-imgs .person{
+    height: 50vh;
+    width: 45vw;
+    margin-top: 6vh;
+    overflow: hidden;
+}
+#small-imgs .person img{
+    width: 100%;
+    object-fit: cover;
+} 
+
+.bottom-title-2{
+    text-align: center;
+    margin-left: 13px;
+}
+.bottom-title-2 h1{
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+.bottom-title-2 p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+.bottom-title-2 p:nth-child(3){
+    padding-bottom: 1vh;
+}
+
+.lining-content-3 .line-3{
+    margin-top: 10px;
+}
+
+/* page--6 */
+
+
+#details-1{
+    margin-top: 13vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 13px;
+}
+#details #email h1{
+    text-transform: uppercase;
+    font-size: 24px;
+}
+#details #arrow span{
+    margin-right: 1.9vh;
+}
+#details .line-4{
+    margin: 10px 10px;
+}
+
+#end{
+    padding-top: 12vh;
+    padding-left: 13px;
+}
+#end #End-logo {
+    height: 10vh;
+    width: 10vh;
+    margin-bottom: 40px;
+}
+
+.about{
+    padding-left: 13px;
+    display: flex;
+}
+.about .about-1{
+    width: 24vh;
+}
+.about .about-1 .about-title h3{
+    font-family: 'Gilroy';
+    font-size: 11px;
+    padding-bottom: 5vh;
+    color: gray;
+    text-transform: uppercase;
+}
+.about .about-1 h3{
+    font-family: 'Gilroy';
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+#para-section{
+    padding-top: 1vh;
+    padding-left: 13px;
+}
+#para-section #para-title{
+    padding: 5vh 0;
+}
+#para-section #para-title h3{
+    color: gray;
+    font-family: 'Gilroy';
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-align: center;
+}
+#para-section #para p{
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 1.2rem;   
+    line-height: 1.3;
+    padding-bottom: 8vh;
+    width: 80%;
+    margin: auto;
+    opacity: .7;
+    text-align: center;
+}
+
+#end-title{
+    padding-left: 13px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 13px;
+    padding-bottom: 2.5vh;
+}
+#end-title h3{
+    font-family: 'Gilroy';
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+
+.menu-page{
+    position: fixed;
+    z-index: 98;
+    height: 110vh;
+    width: 100%;
+    background-color: black;
+}
+.menu-page .section-container{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+.menu-page .section-container .menu-base{
+   overflow: hidden; 
+}
+.menu-page .section-container .menu-base h2{
+    color: #F7F7F7;
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: end;
+}
+.menu-page .section-container .menu-base-1{
+    display: flex;
+    align-items: center;
+}
+.menu-page .section-container .menu-base-1 span{
+    font-weight: 900;
+    color: white;
+    font-size: 40px;
+}
+.menu-page .about-pt2 .about-1-pt2>h3{
+    color: #F7F7F7;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.menu-page .about-pt2{
+    position: absolute;
+    bottom: 16%;
+    left: 5%;
+    padding-left: 0;
+}
+.menu-page .about-pt2 .about-1-pt2{
+    width: 15vh;
+}
+.menu-page .about-pt2 .about-1-pt2 .about-title-pt2 h3{
+    padding-bottom: 2vh;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.cart-section{
+    height: 80vh;
+    width: 100%;
+    position: fixed;
+    z-index: 98;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cart-section .scroller{
+    position: relative;
+}
+.cart-section .empty h3{
+    font-family: 'Gilroy';
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.cart-section .empty button{
+    background-color: transparent;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 25px 80px;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+}
+
+
+/* .scroller{
+    width: 100%;
+    bottom: -27%;
+}
+.scroller .scroller-in{
+    height: 10vh;
+    width: 100%;
+    border-top: 1px solid white;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+}
+.scroller .scroller-in::-webkit-scrollbar{
+    display: none;
+}
+.scroller .scroller-in h2{
+    font-size: 60px;
+    color: white;
+    text-transform: uppercase;
+    animation-name: scroll;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.scroller .scroller-in-rev h2{
+    animation-name: reverse;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+@keyframes reverse {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+} */
+
+
+@media (max-width: 768px) {
+    #main{
+    background-color: #F7F7F7;
+}
+
+/* page--1 */
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 3vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 99;
+}
+#nav #logo{
+    height: 8.5vh;
+    width: 11.5vh;
+    overflow: hidden;
+}
+#nav #logo h1{
+    text-transform: uppercase;
+    width: 100px;
+    line-height: 0.8;
+    font-size: 3.5vh;
+}
+
+#twogoodlogo{
+    margin-top: 1px;
+    height: 40px;
+    width: 40px;
+}
+#nav #menu{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    position: absolute;
+    top: 10%;
+    right: 3%;
+    background-color: #F7F7F7;
+    padding: 1vh 2vh;
+    border-radius: 50px;
+}
+
+#title{
+    width: 100%;
+    text-align: center;
+}
+#title h1{
+    text-transform: uppercase;
+    font-size: clamp(5vw, calc(13vw + 1rem), 13vw);
+    line-height: 0.8;
+    margin: auto;
+    width: 100%;
+}
+
+/* #title .title-p1:nth-child(1){
+    padding-left: 60px;
+} */
+
+#book img{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+.buy-now{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+}
+
+.lining-content{
+    padding: 0vh 1.5vh 0  2.3vh;
+}
+.line-text{
+    display: flex;
+    justify-content: space-between;
+}
+.line-text h3{
+    font-family: 'Gilroy';
+    font-weight: 400;
+    font-size: 1.7vh;
+    text-transform: uppercase;
+}
+.line{
+    padding: 0.8px 20px;
+    background-color: black;
+}
+
+/* page--2 */
+
+#img-container{
+    padding: 0 2.3vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#img-container .img-section{
+    height: 74vh;
+    width: 92vw;
+    margin-top: 1.4vh;
+    position: relative;
+    overflow: hidden;
+
+}
+#img-container .img-section .img img{
+    height: 74vh;
+    width: 92vw;
+    object-fit: cover;
+}
+
+
+#img-container .img-section .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    /* padding: 1.8vh 5%; */
+    width: 90%;
+    height: 8%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+}
+#img-container .img-section .info-1{
+    background-color: #E6F0D7;
+}
+#img-container .img-section .info-2{
+    background-color: #F2DDCB;
+    gap: 30px;
+}
+#img-container .img-section .info-3{
+    background-color: white;
+}
+#img-container .img-section .info h3{
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+
+#img-container .img-section .info .elem1{
+    font-family: 'Gilroy';
+    font-weight: 400;
+}
+#img-container .img-section .info .elem2{
+    font-family: 'Gilroy';
+    font-weight: 700;
+    white-space: nowrap;
+}
+#img-container .img-section .info .dot{
+    padding: 4px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+/* page--3 */
+
+.bottom-title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+}
+.bottom-title h1{
+    line-height: 1;
+    font-size: 31px;
+}
+.bottom-title p{
+    font-family: 'Gilroy';
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+}
+/* .bottom-title p:nth-child(3){
+    padding-bottom: 3vh;
+} */
+
+.line-text-1{
+    justify-content: start;
+    padding-bottom: 8px;
+    margin-top: 2rem;
+}
+.line-1{
+    margin: 0;
 }
 
 
@@ -253,32 +783,34 @@ html,body{
 .bottom-title-1 button{
     font-family: 'Gilroy';
     padding: 2.5vh 2vh;
-    margin: 4vh 3vh;
+    margin: 2vh auto;
     background-color: black;
     color: white;
     border-radius: 50px;
     text-transform: uppercase;
     font-weight: 500;
+    width: 70%;
 }
 
 #small-imgs{
     display: flex;
-    padding: 0 10px;
+    padding: 0 2rem;
     justify-content: space-between;
 }
 #small-imgs .person{
     height: 25vh;
-    width: 20vh;
-    padding-top: 6vh;
+    width: 45vw;
+    margin-top: 6vh;
     overflow: hidden;
+    background-color: red;
 }
 #small-imgs .person img{
-    width: 20vh;
+    width: 100%;
     object-fit: cover;
 } 
 
 .bottom-title-2{
-    text-align: start;
+    text-align: center;
     margin-left: 13px;
 }
 .bottom-title-2 h1{
@@ -288,13 +820,13 @@ html,body{
 .bottom-title-2 p{
     font-size: 17px;
     line-height: 1.5;
-}
-.bottom-title-2 p:nth-child(3){
-    padding-bottom: 1vh;
+    padding-bottom: 2rem;
 }
 
+
+
 .lining-content-3 .line-3{
-    margin-right: 26vh;
+    /* margin-right: 26vh; */
     margin-top: 10px;
 }
 
@@ -466,19 +998,19 @@ html,body{
     font-weight: 500;
     font-size: 16px;
     text-transform: uppercase;
-    padding: 25px 80px;
+    padding: 20px 40px;
     border: 1px solid white;
     border-radius: 50px;
     color: white;
 }
 
 
-.scroller{
+/* .scroller{
     width: 100%;
     bottom: -27%;
 }
 .scroller .scroller-in{
-    height: 10vh;
+    height: 1vh;
     width: 100%;
     border-top: 1px solid white;
     overflow-x: auto;
@@ -519,6 +1051,5 @@ html,body{
     to{
         transform: translateX(0%);
     }
+} */
 }
-
-
